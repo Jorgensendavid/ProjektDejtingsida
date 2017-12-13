@@ -9,7 +9,11 @@ namespace Projekt.Repository
 {
     public class DataContext : DbContext
     {
+        public DataContext() : base("DataContext") {
+
+        }
         public DbSet<User> Users { get; set; }
+
 
     }
 }
