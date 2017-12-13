@@ -28,10 +28,14 @@ namespace Projekt.Controllers
             if (ModelState.IsValid == false)
                 return View();
             dataContext.Users.Add(user);
-            
+
             dataContext.SaveChanges();
             return RedirectToAction("Index");
         }
 
+        public ActionResult SignIn()
+        {
+            return View();
+        }
     }
 }

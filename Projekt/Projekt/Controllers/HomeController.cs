@@ -26,5 +26,9 @@ namespace Projekt.Controllers
 
             return View();
         }
+
+        public ActionResult HomePage() {
+            return View();
+        }
     }
 }
