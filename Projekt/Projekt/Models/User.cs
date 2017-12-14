@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Projekt.Repository;
 
 namespace Projekt.Models 
 {
-    public class User :  IEntity<int>
+    public class User : IdentityUser,  IEntity<int>
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -14,8 +15,8 @@ namespace Projekt.Models
         public int Age { get; set; }
         public string About { get; set; }
 
-        public int signinID { get; set; }
-        public virtual SignIn SignIn { get; set; }
+      //  public int signinID { get; set; }
+     //   public virtual SignIn SignIn { get; set; }
 
     }
 }
